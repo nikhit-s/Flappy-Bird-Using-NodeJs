@@ -1,0 +1,16 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "flappyJS.js",
+  "scripts": {
+    "start": "node udp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dgram": "^1.0.1",
+    "ws": "^8.2.2"
+  },
+  "description": ""
+}
