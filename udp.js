@@ -1,4 +1,6 @@
 const udp = require('dgram');
+const os = require('os');
+
 
 // --------------------creating a udp server --------------------
 
@@ -6,7 +8,7 @@ const udp = require('dgram');
 var server = udp.createSocket('udp4');
 
 const WebSocket = require('ws')
-const wss = new WebSocket.Server({ port: 5000 })
+const wss = new WebSocket.Server({ port: 2055 })
 var ws = null;
 
 wss.on('connection', socket => {
@@ -54,5 +56,5 @@ server.on('listening',function(){
 server.on('close',function(){
   console.log('Socket is closed !');
 });
-
-server.bind(5000);
+console.log('IP Address is : ' + JSON.stringify(os.networkInterfaces()['Wi-Fi']).match(/"192.168.\d+.\d+"/g)[0] + '  Please use this to connect with HyperIMU')
+server.bind(2055);
