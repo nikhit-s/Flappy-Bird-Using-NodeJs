@@ -6,7 +6,7 @@ const udp = require('dgram');
 var server = udp.createSocket('udp4');
 
 const WebSocket = require('ws')
-const wss = new WebSocket.Server({ port: 2055 })
+const wss = new WebSocket.Server({ port: 5000 })
 var ws = null;
 
 wss.on('connection', socket => {
@@ -55,4 +55,4 @@ server.on('close',function(){
   console.log('Socket is closed !');
 });
 
-server.bind(2055);
+server.bind(5000);
